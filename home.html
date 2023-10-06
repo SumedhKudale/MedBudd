@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedBudd Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('home.jpg'); /* Replace 'background.jpg' with your actual background image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #f0f0f0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            margin-top: 100px;
+            padding: 20px;
+            text-align: center;
+            flex: 1;
+        }
+        .logo-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            display: inline-block;
+        }
+        h1 {
+            font-size: 48px;
+            color: #008000; /* Dark Green */
+        }
+        .slogan {
+            font-size: 16px;
+            color: #008000; /* Dark Green */
+            margin-top: 10px;
+        }
+        .button-container {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+            justify-content: center; /* Center buttons horizontally */
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+	    width: 200px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .button-break {
+            flex-basis: 100%; /* Force a line break */
+            height: 0;
+        }
+        footer {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-top: 1px solid #ddd;
+        }
+        .disclaimer {
+            font-weight: bold;
+            color: #ff0000; /* Red */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <h1>MedBudd</h1>
+            <p class="slogan">Your Medicine Buddy</p>
+        </div>
+
+        <div class="button-container">
+            <button class="button" onclick="navigateToFeature(1)">Upload Prescription</button>
+            <button class="button" onclick="navigateToFeature(2)">Drug Dictionary</button>
+            <div class="button-break"></div> <!-- Line break -->
+            <button class="button" onclick="navigateToFeature(3)">Interaction Checker</button>
+            <button class="button" onclick="navigateToFeature(4)">Drug Bot</button>
+        </div>
+    </div>
+
+    <footer>
+        <p class="disclaimer">DISCLAIMER: The information contained herein should NOT be used as a substitute for the advice of an appropriately qualified and licensed physician or other health care provider.</p>
+    </footer>
+
+    <script>
+        function navigateToFeature(featureNumber) {
+            // You can define the URLs for each feature page here.
+            const featureUrls = [
+                'feature1.html',
+                'feature2.html',
+                'feature3.html',
+                'feature4.html'
+            ];
+
+            // Navigate to the selected feature page.
+            window.location.href = featureUrls[featureNumber - 1];
+        }
+    </script>
+</body>
+</html>

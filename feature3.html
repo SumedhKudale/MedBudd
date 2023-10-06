@@ -3,29 +3,22 @@
 <head>
     <title>Embedded Page</title>
     <style>
-        /* Hide the entire iframe */
-        iframe {
+        /* Hide the upper part of the embedded webpage */
+        .vn-wrapper {
             display: none;
         }
-        
-        /* Display the iframe when a button is clicked */
-        #showButton {
-            display: block;
+
+        /* Adjust the height of the iframe */
+        iframe {
+            height: calc(100% - 30px); /* Adjust the height as needed */
         }
     </style>
 </head>
 <body>
-    <button id="showButton">Show Embedded Content</button>
-    <iframe src="https://www.webmd.com/interaction-checker/default.htm" id="embedded-iframe" width="100%" height="600px" frameborder="0"></iframe>
+    <nav aria-label="Primary Site Menu" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" class="vn-wrapper">
+        <!-- Content of the navigation bar you want to hide -->
+    </nav>
 
-    <script>
-        // JavaScript to show the iframe content when the button is clicked
-        document.getElementById("showButton").addEventListener("click", function() {
-            var iframe = document.getElementById("embedded-iframe");
-            iframe.style.display = "block";
-            this.style.display = "none"; // Hide the button
-        });
-    </script>
+    <iframe src="https://www.webmd.com/interaction-checker/default.htm" width="100%" height="600px" frameborder="0"></iframe>
 </body>
 </html>
-

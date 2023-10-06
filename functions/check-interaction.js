@@ -1,5 +1,3 @@
-const fetch = require('node-fetch'); // If not already imported
-
 exports.handler = async function(event, context) {
   try {
     const requestBody = JSON.parse(event.body);

@@ -2,9 +2,30 @@
 <html>
 <head>
     <title>Embedded Page</title>
+    <style>
+        /* Hide the entire iframe */
+        iframe {
+            display: none;
+        }
+        
+        /* Display the iframe when a button is clicked */
+        #showButton {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <iframe src="https://www.webmd.com/interaction-checker/default.htm" width="100%" height="600px" frameborder="0"></iframe>
+    <button id="showButton">Show Embedded Content</button>
+    <iframe src="https://www.webmd.com/interaction-checker/default.htm" id="embedded-iframe" width="100%" height="600px" frameborder="0"></iframe>
+
+    <script>
+        // JavaScript to show the iframe content when the button is clicked
+        document.getElementById("showButton").addEventListener("click", function() {
+            var iframe = document.getElementById("embedded-iframe");
+            iframe.style.display = "block";
+            this.style.display = "none"; // Hide the button
+        });
+    </script>
 </body>
 </html>
 

@@ -5,7 +5,7 @@ exports.handler = async function(event, context) {
 
     console.log('Request received with drug1:', drug1, 'drug2:', drug2);
 
-    const apiUrl = `https://rxnav.nlm.nih.gov/REST/interaction/list.json?rxcuis=${drug1}+${drug2}`;
+    const apiUrl = `https://rxnav.nlm.nih.gov/REST/interaction/list.json?rxcuis=${drug1}+${drug2}&sources=ONCHigh+DrugBank`;
     const response = await fetch(apiUrl);
 
     if (!response.ok) {
